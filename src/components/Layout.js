@@ -13,8 +13,6 @@ const Layout = () => {
     const { dni, genero } = e.target.elements;
     const dniValue = dni.value;
     const generoValue = genero.value;
-    console.log(dniValue);
-    console.log(generoValue);
     let sum = 0;
     let z = 0;
     let xy = 20;
@@ -41,11 +39,8 @@ const Layout = () => {
         }
         z = 11 - sum;
       }
-      console.log(z);
-      console.log(xy + dniValue + z);
       setCuil(`${xy}-${dniValue}-${z}`);
       setState(true);
-
     } else {
 
       toast(
@@ -64,7 +59,7 @@ const Layout = () => {
   }
   return (
     <>
-      <div className="container container-fluid py-5 my-5">
+      <div className="container container-fluid py-5" style={{display: 'flex', flexDirection: 'column'}}>
         <h1 className="text-center text-light mb-3">Obtener mi número de CUIL</h1>
         <div className="row">
           <div className="col-md-6 col-sm-3 mx-auto my-auto">

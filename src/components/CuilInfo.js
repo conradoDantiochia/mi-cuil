@@ -4,9 +4,9 @@ import { Toaster, toast } from 'react-hot-toast';
 const CuilInfo = ({ cuil, state }) => {
 
     return (
-        <div className="card card-body bg-primary bg-gradient mt-2 animated text-light animate__animated animate__fadeInUp animate__delay-2s" >
+        <div className="card card-body bg-primary bg-gradient mt-2 py-2 animated text-light animate__animated animate__fadeInUp animate__delay-2s" >
             {state ?
-                <div className='mx-auto text-center'>
+                <div className='mx-auto mb-2 text-center'>
                     <h3>{cuil}</h3>
                     <hr />
                     <CopyToClipboard
@@ -38,7 +38,6 @@ const CuilInfo = ({ cuil, state }) => {
                     <h3>Ingrese su CUIL y género</h3>
                 </div>
             }
-
         </div>
     );
 };
